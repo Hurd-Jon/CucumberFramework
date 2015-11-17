@@ -16,6 +16,3 @@ A basic integration test framework for serviceframe.
 
 Please note that this will run the feature in the chrome browser as default. To run this test in firefox just pass the argument
 `-p firefox`  e.g. `cucumber -p firefox`
-
-## Feedback
-I would be more than happy to recieve feedback, please email me at: jonathan.chrisp@gmail.com.

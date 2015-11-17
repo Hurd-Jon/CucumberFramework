@@ -6,13 +6,17 @@ class ConfigData
 
 	@@config = {
 	   :PreRelease => {
-	   	:base_url => 'https://prerelease.frmr.org/'
+	   	:base_url => 'https://prerelease.frmr.org/',
+	   	:timeout => 180
 	   },
 	   :Dev => {
-	   	:base_url => 'http://anotherurl.com'
+	   	:base_url => 'http://anotherurl.com',
+	   	:timeout => 10
+
 	   },
 	   :Local => {
-	   	:base_url => 'https://alocalurl.com/'
+	   	:base_url => 'https://alocalurl.com/',
+	   	:timeout => 10
 	   }
 	}
 

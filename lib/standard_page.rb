@@ -1,4 +1,4 @@
-class LoginPage < BasePage
+class StandardPage < BasePage
   def initialize(driver)
     super(driver)
     @driver = driver
