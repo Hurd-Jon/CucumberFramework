@@ -2,8 +2,6 @@ class ConfigData
 
 	@@instance = ConfigData.new
 
-	@@environment = :PreRelease
-
 	@@config = {
 	   :PreRelease => {
 	   	:base_url => 'https://prerelease.frmr.org/',
@@ -12,7 +10,6 @@ class ConfigData
 	   :Dev => {
 	   	:base_url => 'http://anotherurl.com',
 	   	:timeout => 10
-
 	   },
 	   :Local => {
 	   	:base_url => 'https://alocalurl.com/',
@@ -25,11 +22,8 @@ class ConfigData
 	end
 
 	def settings()
-		return @@config[@@environment]
-	end
-
-	def environment()
-		return @@environment
+		environment=ENV['TEST_ENV'] ||= 'PreRelease'
+		return @@config[environment.to_sym]
 	end
 
 end

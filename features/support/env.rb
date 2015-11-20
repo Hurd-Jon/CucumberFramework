@@ -4,6 +4,8 @@ require 'require_all'
 
 require_all 'lib'
 
+ENV['TEST_ENV'] ||= 'PreRelease'
+
 Before do |scenario|
     @browser = Browser.new(ENV['DRIVER'])
     @browser.delete_cookies
